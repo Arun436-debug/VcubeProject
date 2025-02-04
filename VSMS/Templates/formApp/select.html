@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+</head>
+<body>
+
+        {% for rec in sad %}
+        <p>{{rec.stdno}}</p>
+        <p>{{rec.StdName}}</p>
+        {%if rec.image %}
+        <img src="{{rec.image.url}}" alt="" height="200px" width="100px">
+        {%else%}
+        No image Available
+        {%endif%}
+        {%endfor%}
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <center><form action="" contenteditable="False">
+        {%csrf_token%}
+            stdrollno : <input type="number" name="stdnum" value="{{s.stdno}}"><br><br>
+            studentdname : <input type="text" name="stdname" value="{{s.StdName}}"><br><br>
+            Qualification : <input type="text" name="qfn"value="{{s.qualification}}"><br><br>
+            Email : <input type="email" name="email" value="{{s.email}}"><br><br>
+            DOJ : <input type="date" name="doj"  value="{{s.DOJ}}"><br><br>
+            batch : <input type="text" name="btch"  value="{{s.batch}}"><br><br>
+        </form>
+
+        <p><a href="{%url 'stdurl' %}">Back</a></p></center>
+</body>
+</html>

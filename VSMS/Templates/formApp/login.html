@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        form{
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <center><h1>Vcube Application</h1></center>
+        <center><h1>Login to Table Data</h1></center>
+        username : <input type="text" name="uname"><br><br>
+        password : <input type="text" name="pwd"><br><br>
+        <input type="submit" value="login">
+    </form><br><br>
+    <center><p style="color: red;">{{wrong}}</p></center>
+
+    <center><p>Do you Want to Create/Register account <a href="{% url 'signupurl' %}"><b style="color: blueviolet;">SignUp</b></a></p
+        ></center>
+
+</body>
+</html>

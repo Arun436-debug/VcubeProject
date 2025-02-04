@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <form action="" method="post">
+        {%csrf_token%}
+        Enter Roll Number : <input type="number" name="rnum"><br><br>
+        <input type="submit" value="Filter">
+        
+        <table>
+            {for rec in a}
+            <tr><th>RollNumber</th><th>Date</th><th>Attendence</th><th>Mock</th><th>Test</th><th>CaseStudy</th></tr>
+            <tr><td>{rec.rollnum}</td><td>{rec.date}</td><td>{rec.attendence}</td><td>{rec.mock}</td><td>{rec.test}</td><td>{rec.casestudy}</td></tr>
+        </table>
+    </form>
+</body>
+</html>
+<!--
+    rollnum = models.IntegerField(null=True)
+    date = models.DateField(null=True)
+    attendence = models.CharField(max_length=20,null=True)
+    mock = models.CharField(max_length=10,null=True)
+    test = models.CharField(max_length=10,null=True)
+    casestudy = models.CharField(max_length=10,null=True)
+-->

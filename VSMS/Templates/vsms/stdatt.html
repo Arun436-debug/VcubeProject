@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+   <center>
+   <p>Name : {{s.StdName}}</p><br>
+    <table border="1px" cellspacing="0">
+        <tr><th>Date</th><th>Attendence</th><th>Mock Marks</th><th>Test</th></tr>
+        {%for rec in a%}
+        <tr><td>{{rec.date}}&nbsp;&nbsp;</td><td><center>{{rec.attendence}}</center></td><td><center>{{rec.mock}}</center></td><td><center>{{rec.test}}</center></td></tr>
+        {%endfor%}
+    </table> 
+    <h4><a href="{%url 'getatturl' %}">Back</a></h4></center>
+</body>
+</html>
+
+<!--
+    <form action="" method="post">
+    Roll NUmber : <input type="text" name="rno" value="{{a.rollnum}}" ><br><br><br>
+    Date : <input type="text" name="date" value="{{a.date}}">
+    Attendence : <input type="text" name="att" value="{{a.attendence}}"><br><br>
+    Mock Marks : <input type="text" name="mck" value="{{a.mock}}"><br><br>
+    Test Marks : <input type="text" name="test" value="{{a.test}}"><br><br>
+    </form>
+-->

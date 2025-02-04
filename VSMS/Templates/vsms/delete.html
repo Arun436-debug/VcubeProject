@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <form action="{%url 'deleteurl' std.stdno %}" method="post">
+        {%csrf_token%}
+        <h1>Do you Want Delete <p style="color: red;">{{std.StdName}}</p></h1><br><br>
+        <input type="submit" value="Delete">
+    </form>
+
+    <h3><a href="{%url 'selecturl' %}">Back</a></h3>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+
+    <center><table border="1" cellspacing="0" >
+        <tr><th>stdrollno</th><th>stdname</th><th>Qualification</th><th>email</th><th>DOJ</th><th>Batch</th><th colspan="2">Action</th><th>performance</th><th>Images</th></tr>
+        {%for rec in std%}
+        <tr><td>{{rec.stdno}}</td><td>{{rec.StdName}}</td><td>{{rec.qualification}}</td><td>{{rec.email}}</td><td>{{rec.DOJ}}</td><td>{{rec.batch}}</td><td> <a href="{%url 'updateurl' rec.stdno %}"> update </a></td><td><a href="{%url 'deleteurl' rec.stdno%}">Delete</a></td><td>{{rec.image}}</td></tr>
+        {%endfor%}
+    </table>
+    <p><a href="{%url 'inserturl' %}">Insert</a></p></center>
+    
+</body>
+</html>
